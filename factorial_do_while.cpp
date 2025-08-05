@@ -1,16 +1,23 @@
 #include <iostream>
 using namespace std;
+
 int main()
 {
-    long long int fact = 1;
-
     int n;
     cin >> n;
 
-    while (n > 0)
+    do
+    {
+        cin >> n;
+    } while (n < 0);
+
+    long long int fact = 1;
+
+    while (n >= 1)
     {
         fact *= n;
         n--;
     }
+
     cout << fact;
 }
